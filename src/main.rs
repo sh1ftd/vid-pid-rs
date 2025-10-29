@@ -4,7 +4,7 @@ use std::io::{self, Write};
 
 fn format_option<T: std::fmt::Debug>(opt: Option<T>) -> String {
     match opt {
-        Some(val) => format!("{:?}", val),
+        Some(val) => format!("{val:?}"),
         None => "N/A".to_string(),
     }
 }
@@ -12,9 +12,9 @@ fn format_option<T: std::fmt::Debug>(opt: Option<T>) -> String {
 fn format_raw_option(opt: Option<&[u16]>) -> String {
     match opt {
         Some(val) => {
-            let raw_vals = format!("{:?}", val);
+            let raw_vals = format!("{val:?}");
             let utf16_str = String::from_utf16_lossy(val);
-            format!("| Raw: [Raw: {}, Decoded: {}]", raw_vals, utf16_str)
+            format!("| Raw: [Raw: {raw_vals}, Decoded: {utf16_str}]")
         }
         None => String::new(),
     }
