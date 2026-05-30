@@ -20,7 +20,7 @@ A simple command-line utility to list USB HID devices with their vendor IDs, pro
 
 ### Compile from source
 
-```
+```bash
 git clone https://github.com/sh1ftd/vid-pid-rs.git
 cd vid-pid-rs
 cargo build --release

@@ -2,13 +2,13 @@ cargo-features = ["profile-rustflags"]
 
 [package]
     name = "vid-pid-rs"
-    version = "0.1.1"
+    version = "0.1.2"
     edition = "2024"
     license = "MIT"
     authors = ["Shifty <contact@shifty.cloud>"]
 
 [dependencies]
-    hidapi = "2.6.5"
+    hidapi = "2.6.6"
 
 [profile.dev]
     overflow-checks = true
